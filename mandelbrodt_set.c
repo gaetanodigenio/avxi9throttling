@@ -3,13 +3,12 @@
 #include <math.h>
 #include <string.h>
 #include <omp.h>
-// #include "timer.h"
 
 void Gradient();
 
 // picture resolution
-static const int ImageWidth  = 30000;
-static const int ImageHeight = 30000;
+static const int ImageWidth  = 40000;
+static const int ImageHeight = 40000;
 static const double CxMin    = -2.5;
 static const double CxMax    = 1.5;
 static const double CyMin    = -2.0;
@@ -25,9 +24,9 @@ int main()
     pixel_t *pixels = malloc(sizeof(pixel_t)*ImageHeight*ImageWidth);
 
 
-    FILE* fp;
+    //FILE* fp;
 
-//     initialize_timer ( );
+    //initialize_timer ( );
     float t_init = omp_get_wtime();
 
     #pragma omp parallel shared(pixels)
@@ -77,12 +76,12 @@ int main()
     //fprintf(fp,"P6\n %s\n %d\n %d\n %d\n","# no comment",ImageWidth,ImageHeight,MaxColorComponentValue);   
     //fwrite(pixels,sizeof(pixel_t),ImageWidth*ImageWidth,fp);
     //fclose(fp);
-    free(pixels);
+    
 
-//     stop_timer ( );
+   //stop_timer ( );
     printf("Total time: %fs\n", omp_get_wtime() - t_init);
 
-
+    free(pixels);
     return 0;
 }
 
