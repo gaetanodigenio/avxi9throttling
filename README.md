@@ -6,4 +6,4 @@ This is working as designed based on the architecture of the Intel i9 processor.
 AVX workloads use wider registers and require higher power to switch than standard 64-bit registers. 
 This issue is most frequently seen when using benchmarking software such as Prime95 (Prime 95 by default relies on AVX workloads to apply stress)
 For more details:
-[https://www.dell.com/support/kbdoc/it-it/000184687/intel-i9-processor-throttling-under-avx-advanced-vector-extensions](url)
+[throttling]([url](https://www.dell.com/support/kbdoc/it-it/000184687/intel-i9-processor-throttling-under-avx-advanced-vector-extensions))
