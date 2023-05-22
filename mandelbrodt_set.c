@@ -157,6 +157,9 @@ switch( n){
 };
 
 
-//gcc-11 -mno-avx -mno-avx2 -mno-avx512f -fopenmp -o mandelbrodt_novect mandelbrodt_set.c -lm
-
+//Compiling:
+//gcc-11 -mno-avx -mno-avx2 -mno-avx512f -O3 -fopenmp -o mandelbrodt_noavx mandelbrodt_set.c -lm
 //gcc-11 -mavx -O3 -fopenmp -o mandelbrodt_avx mandelbrodt_set.c -lm 
+
+//Running:
+//OMP_NUM_THREADS={numthreads} ./programName
