@@ -162,4 +162,4 @@ switch( n){
 //gcc-11 -mavx -O3 -fopenmp -o mandelbrodt_avx mandelbrodt_set.c -lm 
 
 //Running:
-//OMP_NUM_THREADS={numthreads} ./programName
+//OMP_PLACES=cores('numcores') ./programName
