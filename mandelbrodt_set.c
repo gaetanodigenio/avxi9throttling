@@ -162,4 +162,6 @@ switch( n){
 //gcc-11 -mavx -O3 -fopenmp -o mandelbrodt_avx mandelbrodt_set.c -lm 
 
 //Running:
-//OMP_PLACES=cores('numcores') ./programName
+//OMP_PLACES="cores('numcores')" OMP_NUM_THREADS=cores ./programName
+//OMP_NUM_THREADS=cores because we want to use one thread for each core, "disabling" hyperthreading
+
