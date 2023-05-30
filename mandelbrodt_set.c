@@ -162,6 +162,10 @@ switch( n){
 //gcc-11 -mavx -O3 -fopenmp -o mandelbrodt_avx mandelbrodt_set.c -lm 
 
 //Running:
-//OMP_PLACES="cores('numcores')" OMP_NUM_THREADS=cores ./programName
-//OMP_NUM_THREADS=cores because we want to use one thread for each core, "disabling" hyperthreading
+//OMP_PLACES="cores(numcores)" OMP_PLACES="sockets(1)" OMP_NUM_THREADS=numcores ./programName
+//OMP_NUM_THREADS=numcores because we want to use one thread for each core, "disabling" hyperthreading
 
+//Running perf energy consumption measurements (energy-pkg and energy-ram):
+//OMP_PLACES="cores(numcores)" OMP_PLACES="sockets(1)" OMP_NUM_THREADS=numcores perf stat -r "numIterations" -e power/energy-pkg/
+//OMP_PLACES="cores(numcores)" OMP_PLACES="sockets(1)" OMP_NUM_THREADS=numcores perf stat -r "numIterations" -e power/energy-ram/
+//numInteration is for setting how many times the program is executed
