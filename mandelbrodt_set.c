@@ -23,10 +23,6 @@ int main()
     typedef unsigned char pixel_t[3]; // colors [R, G ,B]
     pixel_t *pixels = malloc(sizeof(pixel_t)*ImageHeight*ImageWidth);
 
-
-    //FILE* fp;
-
-    //initialize_timer ( );
     float t_init = omp_get_wtime();
 
     #pragma omp parallel shared(pixels)
@@ -71,14 +67,7 @@ int main()
             }
         }
     }
-
-    //fp= fopen("MandelbrotSetNEW.ppm","wb");
-    //fprintf(fp,"P6\n %s\n %d\n %d\n %d\n","# no comment",ImageWidth,ImageHeight,MaxColorComponentValue);   
-    //fwrite(pixels,sizeof(pixel_t),ImageWidth*ImageWidth,fp);
-    //fclose(fp);
     
-
-   //stop_timer ( );
     printf("Total time: %fs\n", omp_get_wtime() - t_init);
 
     free(pixels);
