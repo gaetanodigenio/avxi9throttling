@@ -1,4 +1,5 @@
 # Intel Core i9 AVX throttling
+Project for High Performance Computing (HPC) course at Università degli Studi di Salerno (UNISA), computer science master's degree, curriculum Cloud Computing.
 Processor Speed may appear below expected values when monitored through Task Manager or similar applications under periods of heavy load.
 System fans may not appear to increase as CPU load is applied.
 This is working as designed based on the architecture of the Intel i9 processor. 
