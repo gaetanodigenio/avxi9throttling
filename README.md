@@ -7,3 +7,6 @@ AVX workloads use wider registers and require higher power to switch than standa
 This issue is most frequently seen when using benchmarking software such as Prime95 (Prime 95 by default relies on AVX workloads to apply stress).  
 For more details:
 [throttling](https://www.dell.com/support/kbdoc/it-it/000184687/intel-i9-processor-throttling-under-avx-advanced-vector-extensions)
+
+The project paper as a pdf, the mandelbrodt set algorithm code written in C using OpenMP are provided. All the instructions are provided in them.
+
